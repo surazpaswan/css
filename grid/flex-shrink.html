@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flex Shrink Demo</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    .container {
+      display: flex;
+      gap: 10px;
+      padding: 10px;
+      flex-wrap: nowrap;
+      background: #222;
+    }
+
+    .box {
+      flex: 1 1 200px; /* flex-grow:1, flex-shrink:1, flex-basis:200px */
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .box1 {
+      background-color: #e63946;
+      flex-shrink: 1;
+    }
+
+    .box2 {
+      background-color: #f1fa8c;
+      color: #333;
+      flex-shrink: 2;
+    }
+
+    .box3 {
+      background-color: #06d6a0;
+      flex-shrink: 3;
+    }
+
+    .box4 {
+      background-color: #118ab2;
+      flex-shrink: 4;
+    }
+
+    .box5 {
+      background-color: #9d4edd;
+      flex-shrink: 5;
+    }
+
+    /* Responsive behavior */
+    @media (max-width: 800px) {
+      .container {
+        flex-wrap: wrap;
+      }
+      .box {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="box box1">Shrink 1</div>
+    <div class="box box2">Shrink 2</div>
+    <div class="box box3">Shrink 3</div>
+    <div class="box box4">Shrink 4</div>
+    <div class="box box5">Shrink 5</div>
+  </div>
+
+</body>
+</html>
